@@ -19,12 +19,12 @@ $ cd CubicSDR-flatpak
 $ make
 ```
 
-Installing the result elsewhere:
+Installing the resulting .flatpak file:
 ```
 $ flatpak install --bundle CubicSDR.flatpak
 ```
 
-Running the installed version:
+Running the installed app:
 ```
 $ flatpak run com.cubicsdr.App
 ```
