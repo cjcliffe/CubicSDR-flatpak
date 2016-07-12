@@ -10,3 +10,8 @@ $ git clone https://github.com/cjcliffe/CubicSDR-flatpak.git
 $ cd CubicSDR-flatpak
 $ make
 ```
+
+Installing the result elsewhere:
+```
+$ flatpak install --bundle CubicSDR.flatpak
+```
