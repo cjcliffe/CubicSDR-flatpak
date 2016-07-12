@@ -35,6 +35,13 @@
             "sources": [ {  "type": "git", "url": "https://github.com/N0NB/hamlib.git" } ]
         },
         {
+            "name": "libusb",
+            "config-opts": ["--disable-udev"],
+            "make-args": ["-j4"],
+            "sources": [ {"type": "git", "url": "https://github.com/libusb/libusb.git" },
+						 { "type": "shell", "commands": ["cp bootstrap.sh bootstrap"] } ]
+        },
+        {
             "name": "SoapySDR",
             "cmake": true,
             "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
@@ -43,30 +50,33 @@
         },
         {
             "name": "SoapyRTLSDR",
-            "disabled": true,
+            "disabled": false,
             "cmake": true,
             "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
             "make-args": ["-j4"],
             "sources": [ {"type": "git", "url": "https://github.com/pothosware/SoapyRTLSDR.git" } ],
-            "modules": [
-            {
-                "name": "libudev",
-                "config-opts": [""],
-                "make-args": [""],
-                "sources": [ {"type": "git", "url": "" } ]
-            },
-            {
-                "name": "libusb",
-                "config-opts": [""],
-                "make-args": [""],
-                "sources": [ {"type": "git", "url": "https://github.com/libusb/libusb.git" } ]
-            },
-            {
+            "modules": [ {
                 "name": "librtlsdr",
                 "cmake": true,
                 "config-opts": [""],
-                "make-args": [""],
+                "make-args": ["-j4"],
                 "sources": [ {"type": "git", "url": "git://git.osmocom.org/rtl-sdr.git" } ]
+            }
+            ]
+        },
+        {
+            "name": "SoapyAirspy",
+            "disabled": false,
+            "cmake": true,
+            "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
+            "make-args": ["-j4"],
+            "sources": [ {"type": "git", "url": "https://github.com/pothosware/SoapyAirspy.git" } ],
+			"modules": [ {
+                "name": "libairspy",
+                "cmake": true,
+                "config-opts": [""],
+                "make-args": ["-j4"],
+                "sources": [ {"type": "git", "url": "https://github.com/airspy/host.git" } ]
             }
             ]
         },
