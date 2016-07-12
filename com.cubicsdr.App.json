@@ -139,6 +139,23 @@
             "config-opts": ["-DCMAKE_BUILD_TYPE=Release", "-DUSE_HAMLIB=1", "-DUSE_AUDIO_PULSE=1", "-DUSE_AUDIO_ALSA=0" ],
             "make-args": ["-j4"],
             "sources": [ { "type": "git", "url": "https://github.com/pothosware/SoapyAudio.git" } ]
+        },
+        {
+            "name": "SoapyBladeRF",
+            "disabled": false,
+            "cmake": true,
+            "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
+            "make-args": ["-j4"],
+            "sources": [ {"type": "git", "url": "https://github.com/pothosware/SoapyBladeRF.git" } ],
+			"modules": [ {
+                "name": "libbladerf",
+                "cmake": true,
+                "subdir": "host",
+                "config-opts": [""],
+                "make-args": ["-j4"],
+                "sources": [ {"type": "git", "url": "https://github.com/Nuand/bladeRF" } ]
+            }
+            ]
         }
     ]
 }
