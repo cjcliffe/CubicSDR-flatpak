@@ -16,4 +16,14 @@ Installing the result elsewhere:
 $ flatpak install --bundle CubicSDR.flatpak
 ```
 
+Running the installed version:
+```
+@ flatpak run com.cubicsdr.App
+```
+
+Un-installing: (or before re-install)
+```
+$ flatpak uninstall com.cubicsdr.App
+```
+
 Thanks to @digver for the intial flatpak work.
