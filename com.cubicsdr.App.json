@@ -8,6 +8,7 @@
         "--socket=x11",
         "--share=ipc",
         "--share=network",
+        "--device=all",
         "--device=dri",
         "--socket=pulseaudio"
     ],
