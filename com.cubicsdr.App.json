@@ -47,7 +47,14 @@
             "cmake": true,
             "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
             "make-args": ["-j4"],
-            "sources": [ {"type": "git", "url": "https://github.com/pothosware/SoapySDR.git" } ]
+            "sources": [ {"type": "git", "branch":"maint", "url": "https://github.com/pothosware/SoapySDR.git" } ]
+        },
+        {
+            "name": "SoapyRemote",
+            "cmake": true,
+            "config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
+            "make-args": ["-j4"],
+            "sources": [ {"type": "git", "branch":"maint", "url": "https://github.com/pothosware/SoapyRemote.git" } ]
         },
         {
             "name": "SoapyRTLSDR",
@@ -78,6 +85,23 @@
                 "config-opts": [""],
                 "make-args": ["-j4"],
                 "sources": [ {"type": "git", "url": "https://github.com/airspy/host.git" } ]
+            }
+            ]
+        },
+        {
+            "name": "SoapyHackRF",
+            "disabled": false,
+            "cmake": true,
+            "config-opts": ["-DCMAKE_BUILD_TYPE=Release", "-DLIBHACKRF_INCLUDE_DIR=/app/include/libhackrf", "-DLIBHACKRF_LIBRARIES=/app/lib/libhackrf.so"],
+            "make-args": ["-j4"],
+            "sources": [ {"type": "git", "url": "https://github.com/pothosware/SoapyHackRF.git" } ],
+			"modules": [ {
+                "name": "libhackrf",
+                "cmake": true,
+                "subdir": "host",
+                "config-opts": [""],
+                "make-args": ["-j4"],
+                "sources": [ {"type": "git", "url": "https://github.com/mossmann/hackrf.git" } ]
             }
             ]
         },
