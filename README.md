@@ -15,3 +15,5 @@ Installing the result elsewhere:
 ```
 $ flatpak install --bundle CubicSDR.flatpak
 ```
+
+Thanks to @digver for the intial flatpak work.
