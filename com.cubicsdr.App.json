@@ -10,7 +10,8 @@
         "--share=network",
         "--device=all",
         "--device=dri",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        "--filesystem=/home"
     ],
     "modules": [
         {
