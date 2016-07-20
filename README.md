@@ -1,7 +1,5 @@
 # CubicSDR flatpak build
 
-_Note: work-in-progress_
-
 Install ```flatpak``` and ```flatpak-builder``` using instructions from http://flatpak.org/getting.html
 
 Install Gnome Runtime and Sdk, if 'install' steps fail just run again to retry/resume until they pass
