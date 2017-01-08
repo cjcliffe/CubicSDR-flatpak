@@ -17,6 +17,9 @@
         {
             "name": "liquid-dsp",
             "config-opts": ["--enable-fftoverride"],
+            "build-options" : {
+                "cflags": "-march=native"
+            },
             "make-args": ["-j4"],
             "sources": [    { "type": "git", "url": "https://github.com/jgaeddert/liquid-dsp" },
                             { "type": "shell", "commands": ["cp bootstrap.sh bootstrap"] }
