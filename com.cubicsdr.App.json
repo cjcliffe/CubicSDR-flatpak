@@ -16,10 +16,11 @@
     "modules": [
         {
             "name": "liquid-dsp",
-            "config-opts": ["--enable-fftoverride"],
-            "make-args": ["-j4"],
+            "build-options" : { "cflags": "-O -msse3" },
+	    "make-args": ["-j4"],
             "sources": [    { "type": "git", "url": "https://github.com/jgaeddert/liquid-dsp" },
                             { "type": "shell", "commands": ["cp bootstrap.sh bootstrap"] }
+
             ]
         },
         {
