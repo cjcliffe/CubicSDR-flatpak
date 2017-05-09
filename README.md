@@ -6,8 +6,8 @@ Install Gnome Runtime and Sdk, if 'install' steps fail just run again to retry/r
 ```
 $ wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 $ sudo flatpak remote-add --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
-$ flatpak install gnome org.gnome.Platform 3.20
-$ flatpak install gnome org.gnome.Sdk 3.20
+$ flatpak install gnome org.gnome.Platform 3.22
+$ flatpak install gnome org.gnome.Sdk 3.22
 ```
 
 Commands:
